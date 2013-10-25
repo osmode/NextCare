@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class WithingsOAuth1Controller;
+@class WithingsOAuth1Controller, ServerOAuthController;
 @interface LoginViewController : UIViewController <UINavigationControllerDelegate, UITextFieldDelegate>
 {
     
@@ -21,6 +21,7 @@
 }
 
 @property (nonatomic, strong) WithingsOAuth1Controller *withingsOAuth1Controller;
+@property (nonatomic, strong) ServerOAuthController *serverOAuthController;
 @property (nonatomic, copy) void (^selectedActionBlock)(void);
 @property (nonatomic, strong) NSString *oauthToken;
 @property (nonatomic, strong) NSString *oauthTokenSecret;
@@ -28,6 +29,7 @@
 - (IBAction)withingsButtonPressed:(id)sender;
 - (IBAction)loginButtonPressed:(id)sender;
 - (WithingsOAuth1Controller *)withingsOAuth1Controller;
+-(ServerOAuthController *)serverOAuth1Controller;
 - (IBAction)backgroundTapped:(id)sender;
 - (IBAction)authenticateButtonPressed:(id)sender;
 

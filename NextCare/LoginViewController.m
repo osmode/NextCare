@@ -10,13 +10,14 @@
 #import "OAuthLoginViewController.h"
 #import "WithingsOAuth1Controller.h"
 #import "WithingsApiDataStore.h"
+#import "ServerOAuthController.h"
 
 @interface LoginViewController ()
 
 @end
 
 @implementation LoginViewController
-@synthesize withingsOAuth1Controller, oauthToken, oauthTokenSecret, selectedActionBlock;
+@synthesize withingsOAuth1Controller, serverOAuthController, oauthToken, oauthTokenSecret, selectedActionBlock;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -56,7 +57,6 @@
 
 - (IBAction)authenticateButtonPressed:(id)sender {
     
-    NSLog(@"loginButtonPressed");
     NSURL *url = [NSURL URLWithString:@"http://162.243.36.210/test"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"GET";
@@ -125,7 +125,30 @@
 
 - (IBAction)loginButtonPressed:(id)sender {
     
-
+    
+    NSMutableDictionary *moreParams = [[NSMutableDictionary alloc] init];
+    [moreParams setValue:emailTextField.text forKey:@"email"];
+    
+    [moreParams setValue:passwordTextField.text forKey:@"password"];
+    
+    NSURLRequest *request = [ServerOAuthController preparedRequestForPath:@"user/login" parameters:moreParams HTTPmethod:@"POST" oauthToken:@"" oauthSecret:@""];
+        
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:NSOperationQueue.mainQueue
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                               dispatch_async(dispatch_get_main_queue(), ^{
+                                   NSLog(@"path35 %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+                                   
+                                   if (error) {
+                                       
+                                       NSLog(@"Error in API request: %@", error.localizedDescription);
+                                       return;
+                                   }
+                                   
+                                   NSDictionary *d = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                                   
+                               });
+                           }];
 
 }
 
@@ -135,6 +158,14 @@
         withingsOAuth1Controller = [[WithingsOAuth1Controller alloc] init];
     }
     return withingsOAuth1Controller;
+}
+
+-(ServerOAuthController *)serverOAuth1Controller
+{
+    if (serverOAuthController == nil) {
+        serverOAuthController = [[ServerOAuthController alloc] init];
+    }
+    return serverOAuthController;
 }
 
 

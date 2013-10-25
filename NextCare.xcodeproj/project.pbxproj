@@ -26,6 +26,20 @@
 		FA28BECB1819EA0D000815C7 /* NCToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BECA1819EA0D000815C7 /* NCToDoItem.m */; };
 		FA28BECE1819EBC6000815C7 /* tracker.png in Resources */ = {isa = PBXBuildFile; fileRef = FA28BECC1819EBC6000815C7 /* tracker.png */; };
 		FA28BECF1819EBC6000815C7 /* tracker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA28BECD1819EBC6000815C7 /* tracker@2x.png */; };
+		FA28BEEE181A4B55000815C7 /* UNIBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BED3181A4B55000815C7 /* UNIBaseRequest.m */; };
+		FA28BEEF181A4B55000815C7 /* UNIBodyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BED5181A4B55000815C7 /* UNIBodyRequest.m */; };
+		FA28BEF0181A4B55000815C7 /* UNIMultipartRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BED7181A4B55000815C7 /* UNIMultipartRequest.m */; };
+		FA28BEF1181A4B55000815C7 /* UNISimpleRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BED9181A4B55000815C7 /* UNISimpleRequest.m */; };
+		FA28BEF2181A4B55000815C7 /* UNIHTTPBinaryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BEDC181A4B55000815C7 /* UNIHTTPBinaryResponse.m */; };
+		FA28BEF3181A4B55000815C7 /* UNIHTTPJsonResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BEDE181A4B55000815C7 /* UNIHTTPJsonResponse.m */; };
+		FA28BEF4181A4B55000815C7 /* UNIHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BEE0181A4B55000815C7 /* UNIHTTPResponse.m */; };
+		FA28BEF5181A4B55000815C7 /* UNIHTTPStringResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BEE2181A4B55000815C7 /* UNIHTTPStringResponse.m */; };
+		FA28BEF6181A4B55000815C7 /* UNIJsonNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BEE4181A4B55000815C7 /* UNIJsonNode.m */; };
+		FA28BEF7181A4B55000815C7 /* UNIHTTPClientHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BEE6181A4B55000815C7 /* UNIHTTPClientHelper.m */; };
+		FA28BEF8181A4B55000815C7 /* UNIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BEE8181A4B55000815C7 /* UNIHTTPRequest.m */; };
+		FA28BEF9181A4B55000815C7 /* UNIHTTPRequestWithBody.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BEEA181A4B55000815C7 /* UNIHTTPRequestWithBody.m */; };
+		FA28BEFA181A4B55000815C7 /* UNIRest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BEED181A4B55000815C7 /* UNIRest.m */; };
+		FA28BEFD181A4C8C000815C7 /* ServerOAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BEFC181A4C8C000815C7 /* ServerOAuthController.m */; };
 		FA822EEF1819C0EE0078DF48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA822EEE1819C0EE0078DF48 /* Foundation.framework */; };
 		FA822EF11819C0EE0078DF48 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA822EF01819C0EE0078DF48 /* CoreGraphics.framework */; };
 		FA822EF31819C0EE0078DF48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA822EF21819C0EE0078DF48 /* UIKit.framework */; };
@@ -83,6 +97,35 @@
 		FA28BECA1819EA0D000815C7 /* NCToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCToDoItem.m; sourceTree = "<group>"; };
 		FA28BECC1819EBC6000815C7 /* tracker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tracker.png; sourceTree = "<group>"; };
 		FA28BECD1819EBC6000815C7 /* tracker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tracker@2x.png"; sourceTree = "<group>"; };
+		FA28BED2181A4B55000815C7 /* UNIBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIBaseRequest.h; sourceTree = "<group>"; };
+		FA28BED3181A4B55000815C7 /* UNIBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIBaseRequest.m; sourceTree = "<group>"; };
+		FA28BED4181A4B55000815C7 /* UNIBodyRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIBodyRequest.h; sourceTree = "<group>"; };
+		FA28BED5181A4B55000815C7 /* UNIBodyRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIBodyRequest.m; sourceTree = "<group>"; };
+		FA28BED6181A4B55000815C7 /* UNIMultipartRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIMultipartRequest.h; sourceTree = "<group>"; };
+		FA28BED7181A4B55000815C7 /* UNIMultipartRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIMultipartRequest.m; sourceTree = "<group>"; };
+		FA28BED8181A4B55000815C7 /* UNISimpleRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNISimpleRequest.h; sourceTree = "<group>"; };
+		FA28BED9181A4B55000815C7 /* UNISimpleRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNISimpleRequest.m; sourceTree = "<group>"; };
+		FA28BEDB181A4B55000815C7 /* UNIHTTPBinaryResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIHTTPBinaryResponse.h; sourceTree = "<group>"; };
+		FA28BEDC181A4B55000815C7 /* UNIHTTPBinaryResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIHTTPBinaryResponse.m; sourceTree = "<group>"; };
+		FA28BEDD181A4B55000815C7 /* UNIHTTPJsonResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIHTTPJsonResponse.h; sourceTree = "<group>"; };
+		FA28BEDE181A4B55000815C7 /* UNIHTTPJsonResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIHTTPJsonResponse.m; sourceTree = "<group>"; };
+		FA28BEDF181A4B55000815C7 /* UNIHTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIHTTPResponse.h; sourceTree = "<group>"; };
+		FA28BEE0181A4B55000815C7 /* UNIHTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIHTTPResponse.m; sourceTree = "<group>"; };
+		FA28BEE1181A4B55000815C7 /* UNIHTTPStringResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIHTTPStringResponse.h; sourceTree = "<group>"; };
+		FA28BEE2181A4B55000815C7 /* UNIHTTPStringResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIHTTPStringResponse.m; sourceTree = "<group>"; };
+		FA28BEE3181A4B55000815C7 /* UNIJsonNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIJsonNode.h; sourceTree = "<group>"; };
+		FA28BEE4181A4B55000815C7 /* UNIJsonNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIJsonNode.m; sourceTree = "<group>"; };
+		FA28BEE5181A4B55000815C7 /* UNIHTTPClientHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIHTTPClientHelper.h; sourceTree = "<group>"; };
+		FA28BEE6181A4B55000815C7 /* UNIHTTPClientHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIHTTPClientHelper.m; sourceTree = "<group>"; };
+		FA28BEE7181A4B55000815C7 /* UNIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIHTTPRequest.h; sourceTree = "<group>"; };
+		FA28BEE8181A4B55000815C7 /* UNIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIHTTPRequest.m; sourceTree = "<group>"; };
+		FA28BEE9181A4B55000815C7 /* UNIHTTPRequestWithBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIHTTPRequestWithBody.h; sourceTree = "<group>"; };
+		FA28BEEA181A4B55000815C7 /* UNIHTTPRequestWithBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIHTTPRequestWithBody.m; sourceTree = "<group>"; };
+		FA28BEEB181A4B55000815C7 /* Unirest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Unirest-Prefix.pch"; sourceTree = "<group>"; };
+		FA28BEEC181A4B55000815C7 /* UNIRest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIRest.h; sourceTree = "<group>"; };
+		FA28BEED181A4B55000815C7 /* UNIRest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIRest.m; sourceTree = "<group>"; };
+		FA28BEFB181A4C8C000815C7 /* ServerOAuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerOAuthController.h; sourceTree = "<group>"; };
+		FA28BEFC181A4C8C000815C7 /* ServerOAuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerOAuthController.m; sourceTree = "<group>"; };
 		FA822EEB1819C0EE0078DF48 /* NextCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA822EEE1819C0EE0078DF48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA822EF01819C0EE0078DF48 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -155,13 +198,66 @@
 				FA28BEB41819D2E0000815C7 /* OAuthLoginViewController.h */,
 				FA28BEB51819D2E0000815C7 /* OAuthLoginViewController.m */,
 				FA28BEB61819D2E0000815C7 /* OAuthLoginViewController.xib */,
+				FA28BEFB181A4C8C000815C7 /* ServerOAuthController.h */,
+				FA28BEFC181A4C8C000815C7 /* ServerOAuthController.m */,
 			);
 			name = Authentication;
+			sourceTree = "<group>";
+		};
+		FA28BED0181A4B55000815C7 /* Unirest */ = {
+			isa = PBXGroup;
+			children = (
+				FA28BED1181A4B55000815C7 /* HttpRequest */,
+				FA28BEDA181A4B55000815C7 /* HttpResponse */,
+				FA28BEE5181A4B55000815C7 /* UNIHTTPClientHelper.h */,
+				FA28BEE6181A4B55000815C7 /* UNIHTTPClientHelper.m */,
+				FA28BEE7181A4B55000815C7 /* UNIHTTPRequest.h */,
+				FA28BEE8181A4B55000815C7 /* UNIHTTPRequest.m */,
+				FA28BEE9181A4B55000815C7 /* UNIHTTPRequestWithBody.h */,
+				FA28BEEA181A4B55000815C7 /* UNIHTTPRequestWithBody.m */,
+				FA28BEEB181A4B55000815C7 /* Unirest-Prefix.pch */,
+				FA28BEEC181A4B55000815C7 /* UNIRest.h */,
+				FA28BEED181A4B55000815C7 /* UNIRest.m */,
+			);
+			path = Unirest;
+			sourceTree = "<group>";
+		};
+		FA28BED1181A4B55000815C7 /* HttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				FA28BED2181A4B55000815C7 /* UNIBaseRequest.h */,
+				FA28BED3181A4B55000815C7 /* UNIBaseRequest.m */,
+				FA28BED4181A4B55000815C7 /* UNIBodyRequest.h */,
+				FA28BED5181A4B55000815C7 /* UNIBodyRequest.m */,
+				FA28BED6181A4B55000815C7 /* UNIMultipartRequest.h */,
+				FA28BED7181A4B55000815C7 /* UNIMultipartRequest.m */,
+				FA28BED8181A4B55000815C7 /* UNISimpleRequest.h */,
+				FA28BED9181A4B55000815C7 /* UNISimpleRequest.m */,
+			);
+			path = HttpRequest;
+			sourceTree = "<group>";
+		};
+		FA28BEDA181A4B55000815C7 /* HttpResponse */ = {
+			isa = PBXGroup;
+			children = (
+				FA28BEDB181A4B55000815C7 /* UNIHTTPBinaryResponse.h */,
+				FA28BEDC181A4B55000815C7 /* UNIHTTPBinaryResponse.m */,
+				FA28BEDD181A4B55000815C7 /* UNIHTTPJsonResponse.h */,
+				FA28BEDE181A4B55000815C7 /* UNIHTTPJsonResponse.m */,
+				FA28BEDF181A4B55000815C7 /* UNIHTTPResponse.h */,
+				FA28BEE0181A4B55000815C7 /* UNIHTTPResponse.m */,
+				FA28BEE1181A4B55000815C7 /* UNIHTTPStringResponse.h */,
+				FA28BEE2181A4B55000815C7 /* UNIHTTPStringResponse.m */,
+				FA28BEE3181A4B55000815C7 /* UNIJsonNode.h */,
+				FA28BEE4181A4B55000815C7 /* UNIJsonNode.m */,
+			);
+			path = HttpResponse;
 			sourceTree = "<group>";
 		};
 		FA822EE21819C0ED0078DF48 = {
 			isa = PBXGroup;
 			children = (
+				FA28BED0181A4B55000815C7 /* Unirest */,
 				FA28BEC11819E6CB000815C7 /* DashboardViewController.h */,
 				FA28BEC21819E6CB000815C7 /* DashboardViewController.m */,
 				FA28BEC31819E6CB000815C7 /* DashboardViewController.xib */,
@@ -354,18 +450,32 @@
 			files = (
 				FA28BEBB1819D51C000815C7 /* NSString+URLEncoding.m in Sources */,
 				FA28BEB71819D2E0000815C7 /* OAuthLoginViewController.m in Sources */,
+				FA28BEF2181A4B55000815C7 /* UNIHTTPBinaryResponse.m in Sources */,
+				FA28BEF8181A4B55000815C7 /* UNIHTTPRequest.m in Sources */,
 				FA28BEB21819D1F1000815C7 /* hmac.c in Sources */,
 				FA28BEAC1819D1DF000815C7 /* Base64Transcoder.c in Sources */,
+				FA28BEFD181A4C8C000815C7 /* ServerOAuthController.m in Sources */,
+				FA28BEF9181A4B55000815C7 /* UNIHTTPRequestWithBody.m in Sources */,
 				FA28BEC81819E832000815C7 /* NCTeam.m in Sources */,
+				FA28BEF6181A4B55000815C7 /* UNIJsonNode.m in Sources */,
+				FA28BEF5181A4B55000815C7 /* UNIHTTPStringResponse.m in Sources */,
 				FA28BEA91819D058000815C7 /* WithingsJSONData.m in Sources */,
+				FA28BEFA181A4B55000815C7 /* UNIRest.m in Sources */,
+				FA28BEF1181A4B55000815C7 /* UNISimpleRequest.m in Sources */,
 				FA28BEB31819D1F1000815C7 /* sha1.c in Sources */,
+				FA28BEF3181A4B55000815C7 /* UNIHTTPJsonResponse.m in Sources */,
 				FA28BECB1819EA0D000815C7 /* NCToDoItem.m in Sources */,
 				FA28BEA31819CFFF000815C7 /* WithingsOAuth1Controller.m in Sources */,
+				FA28BEF0181A4B55000815C7 /* UNIMultipartRequest.m in Sources */,
 				FA28BEC41819E6CB000815C7 /* DashboardViewController.m in Sources */,
+				FA28BEF4181A4B55000815C7 /* UNIHTTPResponse.m in Sources */,
 				FA822EFB1819C0EE0078DF48 /* main.m in Sources */,
 				FA822EFF1819C0EE0078DF48 /* NCAppDelegate.m in Sources */,
+				FA28BEF7181A4B55000815C7 /* UNIHTTPClientHelper.m in Sources */,
 				FA28BEA61819D03B000815C7 /* WithingsApiDataStore.m in Sources */,
 				FA822F201819C1B80078DF48 /* LoginViewController.m in Sources */,
+				FA28BEEF181A4B55000815C7 /* UNIBodyRequest.m in Sources */,
+				FA28BEEE181A4B55000815C7 /* UNIBaseRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
