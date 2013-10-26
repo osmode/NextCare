@@ -13,9 +13,16 @@
     
 }
 
+typedef enum {
+    TodoMedication,
+    TodoLifestyle,
+    TodoNutrition
+} TodoType;
+
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *description;
-@property (nonatomic) BOOL completed;
+@property (nonatomic) int completed;
 @property (nonatomic, strong) NSString *responsibleParty;
+@property (nonatomic) int todoType;
 
 @end

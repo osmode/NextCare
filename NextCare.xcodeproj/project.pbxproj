@@ -40,6 +40,20 @@
 		FA28BEF9181A4B55000815C7 /* UNIHTTPRequestWithBody.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BEEA181A4B55000815C7 /* UNIHTTPRequestWithBody.m */; };
 		FA28BEFA181A4B55000815C7 /* UNIRest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BEED181A4B55000815C7 /* UNIRest.m */; };
 		FA28BEFD181A4C8C000815C7 /* ServerOAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BEFC181A4C8C000815C7 /* ServerOAuthController.m */; };
+		FA3A437C181ADEFA001522FD /* NCTeamDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A437B181ADEFA001522FD /* NCTeamDataStore.m */; };
+		FA5BFD52181C327E000C0CBE /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5BFD50181C327E000C0CBE /* RegisterViewController.m */; };
+		FA5BFD53181C327E000C0CBE /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5BFD51181C327E000C0CBE /* RegisterViewController.xib */; };
+		FA5BFD57181C3E2B000C0CBE /* ToDoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5BFD55181C3E2B000C0CBE /* ToDoTableViewController.m */; };
+		FA5BFD58181C3E2B000C0CBE /* ToDoTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5BFD56181C3E2B000C0CBE /* ToDoTableViewController.xib */; };
+		FA5BFD5A181C3E69000C0CBE /* todoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5BFD59181C3E69000C0CBE /* todoCell.xib */; };
+		FA5BFD5E181C3F68000C0CBE /* todoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5BFD5D181C3F68000C0CBE /* todoCell.m */; };
+		FA5BFD61181C4517000C0CBE /* diary.png in Resources */ = {isa = PBXBuildFile; fileRef = FA5BFD5F181C4517000C0CBE /* diary.png */; };
+		FA5BFD62181C4517000C0CBE /* diary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA5BFD60181C4517000C0CBE /* diary@2x.png */; };
+		FA5BFD6C181C464C000C0CBE /* TeamListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5BFD6A181C464C000C0CBE /* TeamListTableViewController.m */; };
+		FA5BFD6D181C464C000C0CBE /* TeamListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5BFD6B181C464C000C0CBE /* TeamListTableViewController.xib */; };
+		FA5BFD6F181C468C000C0CBE /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5BFD6E181C468C000C0CBE /* TeamCell.xib */; };
+		FA5BFD72181C4717000C0CBE /* TeamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5BFD71181C4717000C0CBE /* TeamCell.m */; };
+		FA5BFD75181C48E3000C0CBE /* NCTeamMember.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5BFD74181C48E3000C0CBE /* NCTeamMember.m */; };
 		FA822EEF1819C0EE0078DF48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA822EEE1819C0EE0078DF48 /* Foundation.framework */; };
 		FA822EF11819C0EE0078DF48 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA822EF01819C0EE0078DF48 /* CoreGraphics.framework */; };
 		FA822EF31819C0EE0078DF48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA822EF21819C0EE0078DF48 /* UIKit.framework */; };
@@ -126,6 +140,27 @@
 		FA28BEED181A4B55000815C7 /* UNIRest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIRest.m; sourceTree = "<group>"; };
 		FA28BEFB181A4C8C000815C7 /* ServerOAuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerOAuthController.h; sourceTree = "<group>"; };
 		FA28BEFC181A4C8C000815C7 /* ServerOAuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerOAuthController.m; sourceTree = "<group>"; };
+		FA3A437A181ADEFA001522FD /* NCTeamDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTeamDataStore.h; sourceTree = "<group>"; };
+		FA3A437B181ADEFA001522FD /* NCTeamDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTeamDataStore.m; sourceTree = "<group>"; };
+		FA5BFD4F181C327E000C0CBE /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		FA5BFD50181C327E000C0CBE /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		FA5BFD51181C327E000C0CBE /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		FA5BFD54181C3E2B000C0CBE /* ToDoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoTableViewController.h; sourceTree = "<group>"; };
+		FA5BFD55181C3E2B000C0CBE /* ToDoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoTableViewController.m; sourceTree = "<group>"; };
+		FA5BFD56181C3E2B000C0CBE /* ToDoTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToDoTableViewController.xib; sourceTree = "<group>"; };
+		FA5BFD59181C3E69000C0CBE /* todoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = todoCell.xib; sourceTree = "<group>"; };
+		FA5BFD5C181C3F68000C0CBE /* todoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = todoCell.h; sourceTree = "<group>"; };
+		FA5BFD5D181C3F68000C0CBE /* todoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = todoCell.m; sourceTree = "<group>"; };
+		FA5BFD5F181C4517000C0CBE /* diary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diary.png; sourceTree = "<group>"; };
+		FA5BFD60181C4517000C0CBE /* diary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "diary@2x.png"; sourceTree = "<group>"; };
+		FA5BFD69181C464C000C0CBE /* TeamListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamListTableViewController.h; sourceTree = "<group>"; };
+		FA5BFD6A181C464C000C0CBE /* TeamListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamListTableViewController.m; sourceTree = "<group>"; };
+		FA5BFD6B181C464C000C0CBE /* TeamListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamListTableViewController.xib; sourceTree = "<group>"; };
+		FA5BFD6E181C468C000C0CBE /* TeamCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
+		FA5BFD70181C4717000C0CBE /* TeamCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamCell.h; sourceTree = "<group>"; };
+		FA5BFD71181C4717000C0CBE /* TeamCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamCell.m; sourceTree = "<group>"; };
+		FA5BFD73181C48E3000C0CBE /* NCTeamMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTeamMember.h; sourceTree = "<group>"; };
+		FA5BFD74181C48E3000C0CBE /* NCTeamMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTeamMember.m; sourceTree = "<group>"; };
 		FA822EEB1819C0EE0078DF48 /* NextCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA822EEE1819C0EE0078DF48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA822EF01819C0EE0078DF48 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -142,9 +177,9 @@
 		FA822F0F1819C0EE0078DF48 /* NextCareTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NextCareTests-Info.plist"; sourceTree = "<group>"; };
 		FA822F111819C0EE0078DF48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA822F131819C0EE0078DF48 /* NextCareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextCareTests.m; sourceTree = "<group>"; };
-		FA822F1D1819C1B80078DF48 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		FA822F1E1819C1B80078DF48 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		FA822F1F1819C1B80078DF48 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		FA822F1D1819C1B80078DF48 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = NextCare/LoginViewController.h; sourceTree = "<group>"; };
+		FA822F1E1819C1B80078DF48 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = NextCare/LoginViewController.m; sourceTree = "<group>"; };
+		FA822F1F1819C1B80078DF48 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = NextCare/LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,17 +289,63 @@
 			path = HttpResponse;
 			sourceTree = "<group>";
 		};
+		FA5BFD5B181C3E72000C0CBE /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				FA5BFD54181C3E2B000C0CBE /* ToDoTableViewController.h */,
+				FA5BFD55181C3E2B000C0CBE /* ToDoTableViewController.m */,
+				FA5BFD59181C3E69000C0CBE /* todoCell.xib */,
+				FA5BFD5C181C3F68000C0CBE /* todoCell.h */,
+				FA5BFD5D181C3F68000C0CBE /* todoCell.m */,
+				FA5BFD56181C3E2B000C0CBE /* ToDoTableViewController.xib */,
+			);
+			name = ToDo;
+			sourceTree = "<group>";
+		};
+		FA5BFD63181C45EA000C0CBE /* TeamList */ = {
+			isa = PBXGroup;
+			children = (
+				FA5BFD69181C464C000C0CBE /* TeamListTableViewController.h */,
+				FA5BFD6A181C464C000C0CBE /* TeamListTableViewController.m */,
+				FA5BFD6B181C464C000C0CBE /* TeamListTableViewController.xib */,
+				FA5BFD6E181C468C000C0CBE /* TeamCell.xib */,
+				FA5BFD70181C4717000C0CBE /* TeamCell.h */,
+				FA5BFD71181C4717000C0CBE /* TeamCell.m */,
+			);
+			name = TeamList;
+			sourceTree = "<group>";
+		};
+		FA5BFD76181C4FEB000C0CBE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FA5BFD4F181C327E000C0CBE /* RegisterViewController.h */,
+				FA5BFD50181C327E000C0CBE /* RegisterViewController.m */,
+				FA5BFD51181C327E000C0CBE /* RegisterViewController.xib */,
+				FA822F1D1819C1B80078DF48 /* LoginViewController.h */,
+				FA822F1E1819C1B80078DF48 /* LoginViewController.m */,
+				FA822F1F1819C1B80078DF48 /* LoginViewController.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		FA822EE21819C0ED0078DF48 = {
 			isa = PBXGroup;
 			children = (
+				FA5BFD76181C4FEB000C0CBE /* Login */,
+				FA5BFD63181C45EA000C0CBE /* TeamList */,
+				FA5BFD5B181C3E72000C0CBE /* ToDo */,
 				FA28BED0181A4B55000815C7 /* Unirest */,
 				FA28BEC11819E6CB000815C7 /* DashboardViewController.h */,
 				FA28BEC21819E6CB000815C7 /* DashboardViewController.m */,
 				FA28BEC31819E6CB000815C7 /* DashboardViewController.xib */,
 				FA28BEC61819E832000815C7 /* NCTeam.h */,
+				FA5BFD73181C48E3000C0CBE /* NCTeamMember.h */,
+				FA5BFD74181C48E3000C0CBE /* NCTeamMember.m */,
 				FA28BEC71819E832000815C7 /* NCTeam.m */,
 				FA28BEC91819EA0D000815C7 /* NCToDoItem.h */,
 				FA28BECA1819EA0D000815C7 /* NCToDoItem.m */,
+				FA3A437A181ADEFA001522FD /* NCTeamDataStore.h */,
+				FA3A437B181ADEFA001522FD /* NCTeamDataStore.m */,
 				FA822EF41819C0EE0078DF48 /* NextCare */,
 				FA822F0D1819C0EE0078DF48 /* NextCareTests */,
 				FA822EED1819C0EE0078DF48 /* Frameworks */,
@@ -299,9 +380,6 @@
 				FA28BEA01819CEF2000815C7 /* Withings */,
 				FA822EFD1819C0EE0078DF48 /* NCAppDelegate.h */,
 				FA822EFE1819C0EE0078DF48 /* NCAppDelegate.m */,
-				FA822F1D1819C1B80078DF48 /* LoginViewController.h */,
-				FA822F1E1819C1B80078DF48 /* LoginViewController.m */,
-				FA822F1F1819C1B80078DF48 /* LoginViewController.xib */,
 				FA822F001819C0EE0078DF48 /* Images.xcassets */,
 				FA822EF51819C0EE0078DF48 /* Supporting Files */,
 			);
@@ -311,6 +389,8 @@
 		FA822EF51819C0EE0078DF48 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA5BFD5F181C4517000C0CBE /* diary.png */,
+				FA5BFD60181C4517000C0CBE /* diary@2x.png */,
 				FA28BECC1819EBC6000815C7 /* tracker.png */,
 				FA28BECD1819EBC6000815C7 /* tracker@2x.png */,
 				FA28BE9C1819CD3D000815C7 /* withings.png */,
@@ -419,17 +499,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5BFD58181C3E2B000C0CBE /* ToDoTableViewController.xib in Resources */,
 				FA28BEB81819D2E0000815C7 /* OAuthLoginViewController.xib in Resources */,
+				FA5BFD62181C4517000C0CBE /* diary@2x.png in Resources */,
 				FA28BECF1819EBC6000815C7 /* tracker@2x.png in Resources */,
+				FA5BFD5A181C3E69000C0CBE /* todoCell.xib in Resources */,
 				FA28BE9B1819C9E5000815C7 /* home@2x.png in Resources */,
 				FA28BEC51819E6CB000815C7 /* DashboardViewController.xib in Resources */,
 				FA28BE9A1819C9E5000815C7 /* home.png in Resources */,
 				FA28BECE1819EBC6000815C7 /* tracker.png in Resources */,
 				FA28BE9F1819CD3D000815C7 /* withings@2x.png in Resources */,
 				FA822EF91819C0EE0078DF48 /* InfoPlist.strings in Resources */,
+				FA5BFD61181C4517000C0CBE /* diary.png in Resources */,
 				FA822F011819C0EE0078DF48 /* Images.xcassets in Resources */,
 				FA28BE9E1819CD3D000815C7 /* withings.png in Resources */,
 				FA822F211819C1B80078DF48 /* LoginViewController.xib in Resources */,
+				FA5BFD6D181C464C000C0CBE /* TeamListTableViewController.xib in Resources */,
+				FA5BFD6F181C468C000C0CBE /* TeamCell.xib in Resources */,
+				FA5BFD53181C327E000C0CBE /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,9 +536,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA28BEBB1819D51C000815C7 /* NSString+URLEncoding.m in Sources */,
+				FA5BFD6C181C464C000C0CBE /* TeamListTableViewController.m in Sources */,
 				FA28BEB71819D2E0000815C7 /* OAuthLoginViewController.m in Sources */,
 				FA28BEF2181A4B55000815C7 /* UNIHTTPBinaryResponse.m in Sources */,
 				FA28BEF8181A4B55000815C7 /* UNIHTTPRequest.m in Sources */,
+				FA5BFD75181C48E3000C0CBE /* NCTeamMember.m in Sources */,
 				FA28BEB21819D1F1000815C7 /* hmac.c in Sources */,
 				FA28BEAC1819D1DF000815C7 /* Base64Transcoder.c in Sources */,
 				FA28BEFD181A4C8C000815C7 /* ServerOAuthController.m in Sources */,
@@ -467,15 +556,20 @@
 				FA28BECB1819EA0D000815C7 /* NCToDoItem.m in Sources */,
 				FA28BEA31819CFFF000815C7 /* WithingsOAuth1Controller.m in Sources */,
 				FA28BEF0181A4B55000815C7 /* UNIMultipartRequest.m in Sources */,
+				FA3A437C181ADEFA001522FD /* NCTeamDataStore.m in Sources */,
 				FA28BEC41819E6CB000815C7 /* DashboardViewController.m in Sources */,
 				FA28BEF4181A4B55000815C7 /* UNIHTTPResponse.m in Sources */,
 				FA822EFB1819C0EE0078DF48 /* main.m in Sources */,
 				FA822EFF1819C0EE0078DF48 /* NCAppDelegate.m in Sources */,
 				FA28BEF7181A4B55000815C7 /* UNIHTTPClientHelper.m in Sources */,
+				FA5BFD52181C327E000C0CBE /* RegisterViewController.m in Sources */,
 				FA28BEA61819D03B000815C7 /* WithingsApiDataStore.m in Sources */,
+				FA5BFD5E181C3F68000C0CBE /* todoCell.m in Sources */,
 				FA822F201819C1B80078DF48 /* LoginViewController.m in Sources */,
 				FA28BEEF181A4B55000815C7 /* UNIBodyRequest.m in Sources */,
 				FA28BEEE181A4B55000815C7 /* UNIBaseRequest.m in Sources */,
+				FA5BFD72181C4717000C0CBE /* TeamCell.m in Sources */,
+				FA5BFD57181C3E2B000C0CBE /* ToDoTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@
 #import "WithingsOAuth1Controller.h"
 #import "WithingsApiDataStore.h"
 #import "ServerOAuthController.h"
+#import "NCTeamDataStore.h"
 
 @interface LoginViewController ()
 
@@ -65,18 +66,34 @@
                                        queue:NSOperationQueue.mainQueue
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
                                dispatch_async(dispatch_get_main_queue(), ^{
-                                   NSLog(@"path35 %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+                                   //NSLog(@"path35 %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
                                    
+                                   NSDictionary *d = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                                   
+                                   NSString *idString = [d valueForKey:@"id"];
+                                   NSString *tokenString = [d valueForKey:@"token"];
+                                   
+                                   [[NCTeamDataStore sharedStore] setUserId:idString];
+                                   [[NCTeamDataStore sharedStore] setUserToken:tokenString];
+                                   
+
                                    if (error) {
                                        
                                        NSLog(@"Error in API request: %@", error.localizedDescription);
                                        return;
                                    }
                                    
-                                   NSDictionary *d = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    
+                                   
+                                   // store user id and token after login
+                                   //[[NCTeamDataStore sharedStore] setUserId:[d valueForKey:@"id"]];
+                                   
                                    
                                });
                            }];
+    
+    NSLog(@"yyyyyyy");
+    NSLog(@"id: %@, token: %@", [[NCTeamDataStore sharedStore] userId], [[NCTeamDataStore sharedStore] userToken]);
 }
 
 - (IBAction)withingsButtonPressed:(id)sender {
@@ -145,7 +162,36 @@
                                        return;
                                    }
                                    
-                                   NSDictionary *d = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                                   NSArray *a = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                                   
+                                   NSDictionary *d = [a objectAtIndex:1];
+                                   
+                                   NSNumber *idNumber = [d valueForKey:@"id"];
+                                   
+                                   NSString *idInteger = [idNumber stringValue];
+
+        
+                                   NSString *tokenString = [d valueForKey:@"token"];
+                                   NSString *email = [d valueForKey:@"email"];
+                                   NSString *phone = [d valueForKey:@"phone"];
+                                   NSString *type = [d valueForKey:@"type"];
+                                   NSString *code = [d valueForKey:@"code"];
+                                   
+                                   // store id and token
+                                   [[NCTeamDataStore sharedStore] setUserId:[idInteger intValue]];
+                                   [[NCTeamDataStore sharedStore] setUserToken:tokenString];
+                                   [[NCTeamDataStore sharedStore] setEmail:email];
+                                   [[NCTeamDataStore sharedStore] setPhone:phone];
+                                   [[NCTeamDataStore sharedStore] setCode:code];
+                                   
+                                   // populate any existing to do lists
+                                   [[NCTeamDataStore sharedStore] populateToDoList:idInteger];
+                                   
+                                   // populate team lists depending on whether or not a patient/caregiver login, or if a physician logs in
+                                   if ([type isEqualToString:@"patient"] || [type isEqualToString:@"caregiver"]) {
+                                       [[NCTeamDataStore sharedStore] populatePatientCaregiverTeam:idInteger];
+                                   }
+            
                                    
                                });
                            }];
