@@ -67,6 +67,9 @@
                                    
                                });
                            }];
+    
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"SMS reminder successfully sent!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [av show];
 
 }
 
@@ -101,6 +104,8 @@
                                    
                                });
                            }];
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"Email reminder successfully sent!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [av show];
     
 }
 

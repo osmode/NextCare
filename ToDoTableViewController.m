@@ -101,19 +101,21 @@
         cell.backgroundColor = [UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:0.25];
         cell.completedLabel.text = @"Complete!";
         cell.completedLabel.textColor = [UIColor blackColor];
+        cell.completedSwitch.on = YES;
         
     } else {
         cell.backgroundColor = [UIColor whiteColor];
         cell.completedLabel.text = @"Incomplete";
         cell.completedLabel.textColor = [UIColor redColor];
+        cell.completedSwitch.on = NO;
     }
     
     // set image according to type
     if ( [[todoItem type] isEqualToString:@"medication"] ) {
         [cell.categoryImageView setImage:[UIImage imageNamed:@"medication"]];
-    } else if ( [[todoItem type] isEqualToString:@"nutrition"] ) {
+    } else if ( [[todoItem type] isEqualToString:@"diet"] ) {
         [cell.categoryImageView setImage:[UIImage imageNamed:@"nutrition.png"]];
-    } else if ( [[todoItem type] isEqualToString:@"scale"] ) {
+    } else if ( [[todoItem type] isEqualToString:@"weight"] ) {
         [cell.categoryImageView setImage:[UIImage imageNamed:@"scale.png"]];
     }
     

@@ -47,7 +47,7 @@
     //[dashboardButton setImage:[UIImage imageNamed:@"tracker.png"]];
     //[registerButton setTitle:@"Register"];
     [todoButton setTitle:@"Todo List"];
-    [todoButton setImage:[UIImage imageNamed:@"diary.png"]];
+    [todoButton setImage:[UIImage imageNamed:@"tracker.png"]];
     [teamButton setTitle:@"Team"];
     [teamButton setImage:[UIImage imageNamed:@"diary.png"]];
     

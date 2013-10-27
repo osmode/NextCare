@@ -34,6 +34,13 @@
                         <action selector="phoneButtonPressed:" destination="-1" eventType="touchUpInside" id="0F9-wp-UFD"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxI-9f-eF2">
+                    <rect key="frame" x="86" y="358" width="149" height="131"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="video.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -42,5 +49,6 @@
     </objects>
     <resources>
         <image name="phone.png" width="600" height="600"/>
+        <image name="video.png" width="800" height="720"/>
     </resources>
 </document>

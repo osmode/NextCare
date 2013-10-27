@@ -28,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [[self navigationItem] setTitle:@"Conference call"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,7 +68,9 @@
                                    
                                });
                            }];
-
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Conference call started!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [av show];
+    
 }
 
 @end

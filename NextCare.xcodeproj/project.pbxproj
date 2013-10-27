@@ -22,6 +22,8 @@
 		FA0BD490181D9CF60052D33C /* validic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA0BD48F181D9CF60052D33C /* validic.jpg */; };
 		FA0BD494181D9D5C0052D33C /* mashery.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0BD492181D9D5C0052D33C /* mashery.png */; };
 		FA0BD496181D9E140052D33C /* ihealth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA0BD495181D9E140052D33C /* ihealth.jpg */; };
+		FA0BD499181DA8A90052D33C /* team.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0BD497181DA8A90052D33C /* team.png */; };
+		FA0BD49A181DA8A90052D33C /* video.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0BD498181DA8A90052D33C /* video.png */; };
 		FA28BE9A1819C9E5000815C7 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = FA28BE981819C9E5000815C7 /* home.png */; };
 		FA28BE9B1819C9E5000815C7 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA28BE991819C9E5000815C7 /* home@2x.png */; };
 		FA28BE9E1819CD3D000815C7 /* withings.png in Resources */ = {isa = PBXBuildFile; fileRef = FA28BE9C1819CD3D000815C7 /* withings.png */; };
@@ -125,6 +127,8 @@
 		FA0BD48F181D9CF60052D33C /* validic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = validic.jpg; sourceTree = "<group>"; };
 		FA0BD492181D9D5C0052D33C /* mashery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mashery.png; sourceTree = "<group>"; };
 		FA0BD495181D9E140052D33C /* ihealth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ihealth.jpg; sourceTree = "<group>"; };
+		FA0BD497181DA8A90052D33C /* team.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = team.png; sourceTree = "<group>"; };
+		FA0BD498181DA8A90052D33C /* video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video.png; sourceTree = "<group>"; };
 		FA28BE981819C9E5000815C7 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		FA28BE991819C9E5000815C7 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
 		FA28BE9C1819CD3D000815C7 /* withings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = withings.png; sourceTree = "<group>"; };
@@ -498,6 +502,8 @@
 		FA822EF51819C0EE0078DF48 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA0BD497181DA8A90052D33C /* team.png */,
+				FA0BD498181DA8A90052D33C /* video.png */,
 				FA0BD495181D9E140052D33C /* ihealth.jpg */,
 				FA0BD492181D9D5C0052D33C /* mashery.png */,
 				FA0BD48F181D9CF60052D33C /* validic.jpg */,
@@ -635,6 +641,7 @@
 				FA5BFD5A181C3E69000C0CBE /* todoCell.xib in Resources */,
 				FA5BFD82181CB99F000C0CBE /* boat.jpg in Resources */,
 				FA0BD466181D94C40052D33C /* opentok.bundle in Resources */,
+				FA0BD499181DA8A90052D33C /* team.png in Resources */,
 				FA28BE9B1819C9E5000815C7 /* home@2x.png in Resources */,
 				FA28BEC51819E6CB000815C7 /* DashboardViewController.xib in Resources */,
 				FA28BE9A1819C9E5000815C7 /* home.png in Resources */,
@@ -651,6 +658,7 @@
 				FA5BFD6F181C468C000C0CBE /* TeamCell.xib in Resources */,
 				FA0BD496181D9E140052D33C /* ihealth.jpg in Resources */,
 				FA5BFD53181C327E000C0CBE /* RegisterViewController.xib in Resources */,
+				FA0BD49A181DA8A90052D33C /* video.png in Resources */,
 				FA5BFD84181CBA1A000C0CBE /* homer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
