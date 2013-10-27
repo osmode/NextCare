@@ -31,6 +31,7 @@
 -(void)populatePatientCaregiverTeam:(NSString *)userId;
 -(void)addTodoItem:(NCToDoItem *)item;
 -(BOOL)saveChanges;
+-(void)populatePhysiciansPatients:(NSString *)userId;
 
 
 @end

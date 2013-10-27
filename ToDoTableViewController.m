@@ -10,6 +10,7 @@
 #import "NCTeamDataStore.h"
 #import "NCToDoItem.h"
 #import "todoCell.h"
+#import "NewTodoItemViewController.h"
 
 @interface ToDoTableViewController ()
 
@@ -21,6 +22,8 @@
 {
     self = [super initWithStyle:style];
     if (self) {
+        UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(newTodoItem)];
+        [[self navigationItem] setRightBarButtonItem:addButton];
 
     }
     return self;
@@ -88,6 +91,11 @@
     return 100.0;
 }
 
+-(void)newTodoItem
+{
+    NewTodoItemViewController *ntivc = [[NewTodoItemViewController alloc] init];
+    [[self navigationController] pushViewController:ntivc animated:YES];
+}
 
 /*
 // Override to support conditional editing of the table view.

@@ -32,6 +32,8 @@
     UINib *nib = [UINib nibWithNibName:@"TeamCell" bundle:nil];
     // register this NIB
     [[self tableView] registerNib:nib forCellReuseIdentifier:@"TeamCell"];
+    
+    [[self navigationItem] setTitle:@"Team List"];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

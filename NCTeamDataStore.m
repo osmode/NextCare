@@ -85,8 +85,7 @@
     NSMutableString *fullPath = [[firstPart stringByAppendingString:userId] stringByAppendingString:lastPart];
     
     NSURLRequest *request = [ServerOAuthController preparedRequestForPath:fullPath parameters:moreParams HTTPmethod:@"GET" oauthToken:@"" oauthSecret:@""];
-    
-    
+
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:NSOperationQueue.mainQueue
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
@@ -106,6 +105,7 @@
                                    for (NSDictionary *d in a2) {
                                        NSString *title = [d valueForKey:@"description"];
                                        NSString *owner = [d valueForKey:@"caregiver_name"];
+                                       
                                        NSNumber *complete = [d valueForKey:@"complete"];
 
                                        NCToDoItem *newTodo = [[NCToDoItem alloc] init];
@@ -138,7 +138,6 @@
      [moreParams setValue:passwordTextField.text forKey:@"password"];
      */
     
-    NSLog(@"userId: %@", userId);
     NSString *firstPart = @"user/";
     
     NSString *lastPart = @"/caregivers";
@@ -188,11 +187,69 @@
                                        
                                    }
                                    
-                                   
-                                   NSLog(@"length of team member list: %lu", (unsigned long)[[[NCTeamDataStore sharedStore] teamMemberList] count]);
                                });
                            }];
 }
+
+-(void)populatePhysiciansPatients:(NSString *)userId
+{
+    NSMutableDictionary *moreParams = [[NSMutableDictionary alloc] init];
+    /*
+     [moreParams setValue:emailTextField.text forKey:@"email"];
+     [moreParams setValue:passwordTextField.text forKey:@"password"];
+     */
+    
+    NSString *firstPart = @"user/";
+    
+    NSString *lastPart = @"/patients";
+    NSMutableString *fullPath = [[firstPart stringByAppendingString:userId] stringByAppendingString:lastPart];
+    
+    NSURLRequest *request = [ServerOAuthController preparedRequestForPath:fullPath parameters:moreParams HTTPmethod:@"GET" oauthToken:@"" oauthSecret:@""];
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:NSOperationQueue.mainQueue
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                               dispatch_async(dispatch_get_main_queue(), ^{
+                                   NSLog(@"path35 %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+                                   
+                                   if (error) {
+                                       
+                                       NSLog(@"Error in API request: %@", error.localizedDescription);
+                                       return;
+                                   }
+                                   
+                                   NSArray *a = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
+                                   NSArray *a2 = [a objectAtIndex:1];
+                                   
+                                   // iterate through array of dictionaries
+                                   for (NSDictionary *d in a2) {
+                                       NSNumber *idNumber = [d valueForKey:@"id"];
+                                       NSString *name = [d valueForKey:@"name"];
+                                       NSString *type = [d valueForKey:@"type"];
+                                       NSString *email = [d valueForKey:@"email"];
+                                       NSString *phone = [d valueForKey:@"phone"];
+                                       NSString *code = [d valueForKey:@"code"];
+                                       
+                                       NSLog(@"new team member: %@", name);
+                                       
+                                       NCTeamMember *teamMember = [[NCTeamMember alloc] init];
+                                       
+                                       [teamMember setName:name];
+                                       [teamMember setRole:type];
+                                       [teamMember setEmail:email];
+                                       [teamMember setPhone:phone];
+                                       [teamMember setCode:code];
+                                       [teamMember setIdNumber:[idNumber intValue]];
+                                       
+                                       [[[NCTeamDataStore sharedStore] teamMemberList] addObject:teamMember];
+                                       
+                                   }
+                                   
+                                   NSLog(@"length of physician's team member list: %lu", (unsigned long)[[[NCTeamDataStore sharedStore] teamMemberList] count]);
+                               });
+                           }];
+}
+
 
 
 @end

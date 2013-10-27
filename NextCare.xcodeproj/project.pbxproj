@@ -54,6 +54,8 @@
 		FA5BFD6F181C468C000C0CBE /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5BFD6E181C468C000C0CBE /* TeamCell.xib */; };
 		FA5BFD72181C4717000C0CBE /* TeamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5BFD71181C4717000C0CBE /* TeamCell.m */; };
 		FA5BFD75181C48E3000C0CBE /* NCTeamMember.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5BFD74181C48E3000C0CBE /* NCTeamMember.m */; };
+		FA5BFD7A181C8A91000C0CBE /* NewTodoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5BFD78181C8A91000C0CBE /* NewTodoItemViewController.m */; };
+		FA5BFD7B181C8A91000C0CBE /* NewTodoItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5BFD79181C8A91000C0CBE /* NewTodoItemViewController.xib */; };
 		FA822EEF1819C0EE0078DF48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA822EEE1819C0EE0078DF48 /* Foundation.framework */; };
 		FA822EF11819C0EE0078DF48 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA822EF01819C0EE0078DF48 /* CoreGraphics.framework */; };
 		FA822EF31819C0EE0078DF48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA822EF21819C0EE0078DF48 /* UIKit.framework */; };
@@ -161,6 +163,9 @@
 		FA5BFD71181C4717000C0CBE /* TeamCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamCell.m; sourceTree = "<group>"; };
 		FA5BFD73181C48E3000C0CBE /* NCTeamMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTeamMember.h; sourceTree = "<group>"; };
 		FA5BFD74181C48E3000C0CBE /* NCTeamMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTeamMember.m; sourceTree = "<group>"; };
+		FA5BFD77181C8A91000C0CBE /* NewTodoItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTodoItemViewController.h; sourceTree = "<group>"; };
+		FA5BFD78181C8A91000C0CBE /* NewTodoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTodoItemViewController.m; sourceTree = "<group>"; };
+		FA5BFD79181C8A91000C0CBE /* NewTodoItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewTodoItemViewController.xib; sourceTree = "<group>"; };
 		FA822EEB1819C0EE0078DF48 /* NextCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA822EEE1819C0EE0078DF48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA822EF01819C0EE0078DF48 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -294,10 +299,13 @@
 			children = (
 				FA5BFD54181C3E2B000C0CBE /* ToDoTableViewController.h */,
 				FA5BFD55181C3E2B000C0CBE /* ToDoTableViewController.m */,
+				FA5BFD56181C3E2B000C0CBE /* ToDoTableViewController.xib */,
+				FA5BFD77181C8A91000C0CBE /* NewTodoItemViewController.h */,
+				FA5BFD78181C8A91000C0CBE /* NewTodoItemViewController.m */,
+				FA5BFD79181C8A91000C0CBE /* NewTodoItemViewController.xib */,
 				FA5BFD59181C3E69000C0CBE /* todoCell.xib */,
 				FA5BFD5C181C3F68000C0CBE /* todoCell.h */,
 				FA5BFD5D181C3F68000C0CBE /* todoCell.m */,
-				FA5BFD56181C3E2B000C0CBE /* ToDoTableViewController.xib */,
 			);
 			name = ToDo;
 			sourceTree = "<group>";
@@ -500,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5BFD58181C3E2B000C0CBE /* ToDoTableViewController.xib in Resources */,
+				FA5BFD7B181C8A91000C0CBE /* NewTodoItemViewController.xib in Resources */,
 				FA28BEB81819D2E0000815C7 /* OAuthLoginViewController.xib in Resources */,
 				FA5BFD62181C4517000C0CBE /* diary@2x.png in Resources */,
 				FA28BECF1819EBC6000815C7 /* tracker@2x.png in Resources */,
@@ -543,6 +552,7 @@
 				FA5BFD75181C48E3000C0CBE /* NCTeamMember.m in Sources */,
 				FA28BEB21819D1F1000815C7 /* hmac.c in Sources */,
 				FA28BEAC1819D1DF000815C7 /* Base64Transcoder.c in Sources */,
+				FA5BFD7A181C8A91000C0CBE /* NewTodoItemViewController.m in Sources */,
 				FA28BEFD181A4C8C000815C7 /* ServerOAuthController.m in Sources */,
 				FA28BEF9181A4B55000815C7 /* UNIHTTPRequestWithBody.m in Sources */,
 				FA28BEC81819E832000815C7 /* NCTeam.m in Sources */,

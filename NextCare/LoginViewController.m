@@ -141,8 +141,7 @@
 }
 
 - (IBAction)loginButtonPressed:(id)sender {
-    
-    
+
     NSMutableDictionary *moreParams = [[NSMutableDictionary alloc] init];
     [moreParams setValue:emailTextField.text forKey:@"email"];
     
@@ -187,9 +186,11 @@
                                    // populate any existing to do lists
                                    [[NCTeamDataStore sharedStore] populateToDoList:idInteger];
                                    
-                                   // populate team lists depending on whether or not a patient/caregiver login, or if a physician logs in
+                                   // populate team lists and to do lists depending on whether or not a patient/caregiver login, or if a physician logs in
                                    if ([type isEqualToString:@"patient"] || [type isEqualToString:@"caregiver"]) {
                                        [[NCTeamDataStore sharedStore] populatePatientCaregiverTeam:idInteger];
+                                   } else {
+                                       [[NCTeamDataStore sharedStore] populatePhysiciansPatients:idInteger];
                                    }
             
                                    
