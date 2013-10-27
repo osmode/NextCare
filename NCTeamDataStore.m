@@ -105,6 +105,8 @@
                                    for (NSDictionary *d in a2) {
                                        NSString *title = [d valueForKey:@"description"];
                                        NSString *owner = [d valueForKey:@"caregiver_name"];
+                                       NSNumber *caregiverIdNumber = [d valueForKey:@"caregiver_id"];
+                                       NSString *caregiverId = [caregiverIdNumber stringValue];
                                        
                                        NSNumber *complete = [d valueForKey:@"complete"];
 
@@ -112,6 +114,7 @@
                                        [newTodo setTitle:title];
                                        [newTodo setResponsibleParty:owner];
                                        [newTodo setCompleted:[complete intValue]];
+                                       [newTodo setCaregiverId:caregiverId];
                                        
                                        NSLog(@"completed status: %i", [newTodo completed]);
                                     
@@ -119,7 +122,6 @@
                                         
                                    }
             
-                                   
                                    NSLog(@"length of todo list: %lu", (unsigned long)[[[NCTeamDataStore sharedStore] toDoList] count]);
                                });
                            }];

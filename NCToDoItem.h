@@ -24,5 +24,6 @@ typedef enum {
 @property (nonatomic) int completed;
 @property (nonatomic, strong) NSString *responsibleParty;
 @property (nonatomic) int todoType;
+@property (nonatomic, strong) NSString *caregiverId;
 
 @end

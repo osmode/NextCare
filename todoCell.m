@@ -7,13 +7,92 @@
 //
 
 #import "todoCell.h"
+#import "NCTeamDataStore.h"
+#import "NCToDoItem.h"
+#import "ServerOAuthController.h"
 
 @implementation todoCell
 @synthesize smsButton, emailButton;
 
 -(void)smsButtonPressed:(UIButton *)sender
 {
-    NSLog(@"smsButtonPressed!");
+    NSLog(@"smsButtonPressed! %i", sender.tag);
+    [self sendSms:sender.tag];
+}
+
+-(void)emailButtonPressed:(UIButton *)sender
+{
+    NSLog(@"emailButtonPressed! %i", sender.tag);
+    [self sendEmail:sender.tag];
+}
+
+-(void)sendSms:(int)index
+{
+
+    NCToDoItem *todoItem = [[[NCTeamDataStore sharedStore] toDoList] objectAtIndex:index];
+    
+    NSString *caregiverId = [todoItem caregiverId];
+    NSString *message = [todoItem title];
+    
+    NSString *pathFirstHalf = @"user/";
+    NSString *pathLastHalf = @"/remind";
+    NSString *fullPath = [[pathFirstHalf stringByAppendingString:caregiverId] stringByAppendingString:pathLastHalf];
+    
+    NSMutableDictionary *moreParams = [[NSMutableDictionary alloc] init];
+    [moreParams setValue:message forKey:@"message"];
+    
+    NSURLRequest *request = [ServerOAuthController preparedRequestForPath:fullPath parameters:moreParams HTTPmethod:@"POST" oauthToken:@"" oauthSecret:@""];
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:NSOperationQueue.mainQueue
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                               dispatch_async(dispatch_get_main_queue(), ^{
+                                   NSLog(@"path47 %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+                                   
+                                   if (error) {
+                                       
+                                       NSLog(@"Error in API request: %@", error.localizedDescription);
+                                       return;
+                                   }
+
+                                   
+                               });
+                           }];
+
+}
+
+-(void)sendEmail:(int)index
+{
+
+    NCToDoItem *todoItem = [[[NCTeamDataStore sharedStore] toDoList] objectAtIndex:index];
+    
+    NSString *caregiverId = [todoItem caregiverId];
+    NSString *message = [todoItem title];
+    
+    NSString *pathFirstHalf = @"user/";
+    NSString *pathLastHalf = @"/email";
+    NSString *fullPath = [[pathFirstHalf stringByAppendingString:caregiverId] stringByAppendingString:pathLastHalf];
+    
+    NSMutableDictionary *moreParams = [[NSMutableDictionary alloc] init];
+    [moreParams setValue:message forKey:@"message"];
+    
+    NSURLRequest *request = [ServerOAuthController preparedRequestForPath:fullPath parameters:moreParams HTTPmethod:@"POST" oauthToken:@"" oauthSecret:@""];
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:NSOperationQueue.mainQueue
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                               dispatch_async(dispatch_get_main_queue(), ^{
+                                   NSLog(@"path42 %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+                                   
+                                   if (error) {
+                                       
+                                       NSLog(@"Error in API request: %@", error.localizedDescription);
+                                       return;
+                                   }
+                                   
+                               });
+                           }];
+    
 }
 
 

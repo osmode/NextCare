@@ -30,22 +30,22 @@
     TeamListTableViewController *tltvc = [[TeamListTableViewController alloc] init];
     
     UINavigationController *loginNavController = [[UINavigationController alloc] initWithRootViewController:lvc];
-    UINavigationController *dashboardNavController = [[UINavigationController alloc] initWithRootViewController:dvc];
-    UINavigationController *registerNavController = [[UINavigationController alloc] initWithRootViewController:rvc];
+    //UINavigationController *dashboardNavController = [[UINavigationController alloc] initWithRootViewController:dvc];
+    //UINavigationController *registerNavController = [[UINavigationController alloc] initWithRootViewController:rvc];
     UINavigationController *ttvcNavController = [[UINavigationController alloc] initWithRootViewController:ttvc];
     UINavigationController *teamNavController = [[UINavigationController alloc] initWithRootViewController:tltvc];
 
     UITabBarItem *loginButton = [lvc tabBarItem];
-    UITabBarItem *dashboardButton = [dvc tabBarItem];
-    UITabBarItem *registerButton = [rvc tabBarItem];
+    //UITabBarItem *dashboardButton = [dvc tabBarItem];
+    //UITabBarItem *registerButton = [rvc tabBarItem];
     UITabBarItem *todoButton = [ttvc tabBarItem];
     UITabBarItem *teamButton = [tltvc tabBarItem];
     
     [loginButton setTitle:@"Login"];
     [loginButton setImage:[UIImage imageNamed:@"home.png"]];
-    [dashboardButton setTitle:@"Dashboard"];
-    [dashboardButton setImage:[UIImage imageNamed:@"tracker.png"]];
-    [registerButton setTitle:@"Register"];
+    //[dashboardButton setTitle:@"Dashboard"];
+    //[dashboardButton setImage:[UIImage imageNamed:@"tracker.png"]];
+    //[registerButton setTitle:@"Register"];
     [todoButton setTitle:@"Todo List"];
     [todoButton setImage:[UIImage imageNamed:@"diary.png"]];
     [teamButton setTitle:@"Team"];
@@ -53,7 +53,7 @@
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
-    NSArray *viewControllers = [NSArray arrayWithObjects: loginNavController, dashboardNavController, registerNavController, ttvcNavController, teamNavController, nil];
+    NSArray *viewControllers = [NSArray arrayWithObjects: loginNavController, ttvcNavController, teamNavController, nil];
     [tabBarController setViewControllers:viewControllers];
     
     [[self window] setRootViewController:tabBarController];

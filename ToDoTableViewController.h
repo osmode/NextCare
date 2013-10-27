@@ -13,7 +13,8 @@
     
 }
 
--(void)smsButtonPressed:(UIButton *)sender;
--(void)emailButtonPressed:(UIButton *)sender;
+//-(void)smsButtonPressed:(UIButton *)sender;
+-(void)smsButtonPressed;
+-(void)emailButtonPressed;
 
 @end
