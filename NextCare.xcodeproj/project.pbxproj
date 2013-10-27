@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0BD466181D94C40052D33C /* opentok.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FA0BD465181D94C40052D33C /* opentok.bundle */; };
+		FA0BD472181D95470052D33C /* Opentok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0BD467181D95470052D33C /* Opentok.framework */; };
+		FA0BD473181D95470052D33C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0BD468181D95470052D33C /* CoreTelephony.framework */; };
+		FA0BD474181D95470052D33C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0BD469181D95470052D33C /* MobileCoreServices.framework */; };
+		FA0BD475181D95470052D33C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0BD46A181D95470052D33C /* CFNetwork.framework */; };
+		FA0BD476181D95470052D33C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0BD46B181D95470052D33C /* SystemConfiguration.framework */; };
+		FA0BD477181D95470052D33C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0BD46C181D95470052D33C /* CoreMedia.framework */; };
+		FA0BD484181D96840052D33C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0BD483181D96840052D33C /* QuartzCore.framework */; };
+		FA0BD486181D969A0052D33C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0BD485181D969A0052D33C /* libz.dylib */; };
+		FA0BD488181D96A70052D33C /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0BD487181D96A70052D33C /* libstdc++.dylib */; };
+		FA0BD48A181D98930052D33C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0BD489181D98920052D33C /* CoreVideo.framework */; };
+		FA0BD48B181D98990052D33C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0BD481181D961F0052D33C /* AVFoundation.framework */; };
+		FA0BD490181D9CF60052D33C /* validic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA0BD48F181D9CF60052D33C /* validic.jpg */; };
+		FA0BD494181D9D5C0052D33C /* mashery.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0BD492181D9D5C0052D33C /* mashery.png */; };
+		FA0BD496181D9E140052D33C /* ihealth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA0BD495181D9E140052D33C /* ihealth.jpg */; };
 		FA28BE9A1819C9E5000815C7 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = FA28BE981819C9E5000815C7 /* home.png */; };
 		FA28BE9B1819C9E5000815C7 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA28BE991819C9E5000815C7 /* home@2x.png */; };
 		FA28BE9E1819CD3D000815C7 /* withings.png in Resources */ = {isa = PBXBuildFile; fileRef = FA28BE9C1819CD3D000815C7 /* withings.png */; };
@@ -40,7 +55,6 @@
 		FA28BEF9181A4B55000815C7 /* UNIHTTPRequestWithBody.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BEEA181A4B55000815C7 /* UNIHTTPRequestWithBody.m */; };
 		FA28BEFA181A4B55000815C7 /* UNIRest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BEED181A4B55000815C7 /* UNIRest.m */; };
 		FA28BEFD181A4C8C000815C7 /* ServerOAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BEFC181A4C8C000815C7 /* ServerOAuthController.m */; };
-		FA2CE036181D77A800F5E438 /* validic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA2CE035181D77A800F5E438 /* validic.jpg */; };
 		FA2CE03A181D7B3100F5E438 /* PatientDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2CE038181D7B3100F5E438 /* PatientDetailViewController.m */; };
 		FA2CE03B181D7B3100F5E438 /* PatientDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2CE039181D7B3100F5E438 /* PatientDetailViewController.xib */; };
 		FA2CE03E181D7C7D00F5E438 /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2CE03D181D7C7D00F5E438 /* phone.png */; };
@@ -96,6 +110,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA0BD465181D94C40052D33C /* opentok.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = opentok.bundle; sourceTree = "<group>"; };
+		FA0BD467181D95470052D33C /* Opentok.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Opentok.framework; sourceTree = "<group>"; };
+		FA0BD468181D95470052D33C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreTelephony.framework; sourceTree = "<group>"; };
+		FA0BD469181D95470052D33C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileCoreServices.framework; sourceTree = "<group>"; };
+		FA0BD46A181D95470052D33C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CFNetwork.framework; sourceTree = "<group>"; };
+		FA0BD46B181D95470052D33C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SystemConfiguration.framework; sourceTree = "<group>"; };
+		FA0BD46C181D95470052D33C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreMedia.framework; sourceTree = "<group>"; };
+		FA0BD481181D961F0052D33C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FA0BD483181D96840052D33C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FA0BD485181D969A0052D33C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		FA0BD487181D96A70052D33C /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		FA0BD489181D98920052D33C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		FA0BD48F181D9CF60052D33C /* validic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = validic.jpg; sourceTree = "<group>"; };
+		FA0BD492181D9D5C0052D33C /* mashery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mashery.png; sourceTree = "<group>"; };
+		FA0BD495181D9E140052D33C /* ihealth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ihealth.jpg; sourceTree = "<group>"; };
 		FA28BE981819C9E5000815C7 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		FA28BE991819C9E5000815C7 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
 		FA28BE9C1819CD3D000815C7 /* withings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = withings.png; sourceTree = "<group>"; };
@@ -155,7 +184,6 @@
 		FA28BEED181A4B55000815C7 /* UNIRest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIRest.m; sourceTree = "<group>"; };
 		FA28BEFB181A4C8C000815C7 /* ServerOAuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerOAuthController.h; sourceTree = "<group>"; };
 		FA28BEFC181A4C8C000815C7 /* ServerOAuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerOAuthController.m; sourceTree = "<group>"; };
-		FA2CE035181D77A800F5E438 /* validic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = validic.jpg; sourceTree = "<group>"; };
 		FA2CE037181D7B3100F5E438 /* PatientDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientDetailViewController.h; sourceTree = "<group>"; };
 		FA2CE038181D7B3100F5E438 /* PatientDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientDetailViewController.m; sourceTree = "<group>"; };
 		FA2CE039181D7B3100F5E438 /* PatientDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientDetailViewController.xib; sourceTree = "<group>"; };
@@ -220,8 +248,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0BD48B181D98990052D33C /* AVFoundation.framework in Frameworks */,
+				FA0BD48A181D98930052D33C /* CoreVideo.framework in Frameworks */,
+				FA0BD488181D96A70052D33C /* libstdc++.dylib in Frameworks */,
+				FA0BD486181D969A0052D33C /* libz.dylib in Frameworks */,
+				FA0BD484181D96840052D33C /* QuartzCore.framework in Frameworks */,
 				FA822EF11819C0EE0078DF48 /* CoreGraphics.framework in Frameworks */,
+				FA0BD476181D95470052D33C /* SystemConfiguration.framework in Frameworks */,
+				FA0BD474181D95470052D33C /* MobileCoreServices.framework in Frameworks */,
+				FA0BD475181D95470052D33C /* CFNetwork.framework in Frameworks */,
+				FA0BD477181D95470052D33C /* CoreMedia.framework in Frameworks */,
+				FA0BD472181D95470052D33C /* Opentok.framework in Frameworks */,
 				FA822EF31819C0EE0078DF48 /* UIKit.framework in Frameworks */,
+				FA0BD473181D95470052D33C /* CoreTelephony.framework in Frameworks */,
 				FA822EEF1819C0EE0078DF48 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +278,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA0BD47D181D95D20052D33C /* OpenTok */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = OpenTok;
+			sourceTree = "<group>";
+		};
 		FA28BEA01819CEF2000815C7 /* Withings */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +399,12 @@
 		FA5BFD63181C45EA000C0CBE /* TeamList */ = {
 			isa = PBXGroup;
 			children = (
+				FA28BEC61819E832000815C7 /* NCTeam.h */,
+				FA5BFD73181C48E3000C0CBE /* NCTeamMember.h */,
+				FA5BFD74181C48E3000C0CBE /* NCTeamMember.m */,
+				FA28BEC71819E832000815C7 /* NCTeam.m */,
+				FA3A437A181ADEFA001522FD /* NCTeamDataStore.h */,
+				FA3A437B181ADEFA001522FD /* NCTeamDataStore.m */,
 				FA5BFD69181C464C000C0CBE /* TeamListTableViewController.h */,
 				FA5BFD6A181C464C000C0CBE /* TeamListTableViewController.m */,
 				FA5BFD6B181C464C000C0CBE /* TeamListTableViewController.xib */,
@@ -382,6 +434,8 @@
 		FA822EE21819C0ED0078DF48 = {
 			isa = PBXGroup;
 			children = (
+				FA0BD465181D94C40052D33C /* opentok.bundle */,
+				FA0BD47D181D95D20052D33C /* OpenTok */,
 				FA2CE03C181D7B4200F5E438 /* Patient Detail View Controller */,
 				FA5BFD76181C4FEB000C0CBE /* Login */,
 				FA5BFD63181C45EA000C0CBE /* TeamList */,
@@ -390,12 +444,6 @@
 				FA28BEC11819E6CB000815C7 /* DashboardViewController.h */,
 				FA28BEC21819E6CB000815C7 /* DashboardViewController.m */,
 				FA28BEC31819E6CB000815C7 /* DashboardViewController.xib */,
-				FA28BEC61819E832000815C7 /* NCTeam.h */,
-				FA5BFD73181C48E3000C0CBE /* NCTeamMember.h */,
-				FA5BFD74181C48E3000C0CBE /* NCTeamMember.m */,
-				FA28BEC71819E832000815C7 /* NCTeam.m */,
-				FA3A437A181ADEFA001522FD /* NCTeamDataStore.h */,
-				FA3A437B181ADEFA001522FD /* NCTeamDataStore.m */,
 				FA822EF41819C0EE0078DF48 /* NextCare */,
 				FA822F0D1819C0EE0078DF48 /* NextCareTests */,
 				FA822EED1819C0EE0078DF48 /* Frameworks */,
@@ -415,6 +463,17 @@
 		FA822EED1819C0EE0078DF48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA0BD489181D98920052D33C /* CoreVideo.framework */,
+				FA0BD487181D96A70052D33C /* libstdc++.dylib */,
+				FA0BD485181D969A0052D33C /* libz.dylib */,
+				FA0BD483181D96840052D33C /* QuartzCore.framework */,
+				FA0BD481181D961F0052D33C /* AVFoundation.framework */,
+				FA0BD467181D95470052D33C /* Opentok.framework */,
+				FA0BD468181D95470052D33C /* CoreTelephony.framework */,
+				FA0BD469181D95470052D33C /* MobileCoreServices.framework */,
+				FA0BD46A181D95470052D33C /* CFNetwork.framework */,
+				FA0BD46B181D95470052D33C /* SystemConfiguration.framework */,
+				FA0BD46C181D95470052D33C /* CoreMedia.framework */,
 				FA822EEE1819C0EE0078DF48 /* Foundation.framework */,
 				FA822EF01819C0EE0078DF48 /* CoreGraphics.framework */,
 				FA822EF21819C0EE0078DF48 /* UIKit.framework */,
@@ -439,8 +498,10 @@
 		FA822EF51819C0EE0078DF48 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA0BD495181D9E140052D33C /* ihealth.jpg */,
+				FA0BD492181D9D5C0052D33C /* mashery.png */,
+				FA0BD48F181D9CF60052D33C /* validic.jpg */,
 				FA2CE03D181D7C7D00F5E438 /* phone.png */,
-				FA2CE035181D77A800F5E438 /* validic.jpg */,
 				FA538DFE181D01E20035DC0A /* medication.png */,
 				FA538DFF181D01E20035DC0A /* nutrition.png */,
 				FA538E00181D01E20035DC0A /* scale.png */,
@@ -567,11 +628,13 @@
 				FA2CE03B181D7B3100F5E438 /* PatientDetailViewController.xib in Resources */,
 				FA28BEB81819D2E0000815C7 /* OAuthLoginViewController.xib in Resources */,
 				FA5BFD80181C9866000C0CBE /* NewRelationshipViewController.xib in Resources */,
+				FA0BD490181D9CF60052D33C /* validic.jpg in Resources */,
 				FA5BFD62181C4517000C0CBE /* diary@2x.png in Resources */,
+				FA0BD494181D9D5C0052D33C /* mashery.png in Resources */,
 				FA28BECF1819EBC6000815C7 /* tracker@2x.png in Resources */,
 				FA5BFD5A181C3E69000C0CBE /* todoCell.xib in Resources */,
-				FA2CE036181D77A800F5E438 /* validic.jpg in Resources */,
 				FA5BFD82181CB99F000C0CBE /* boat.jpg in Resources */,
+				FA0BD466181D94C40052D33C /* opentok.bundle in Resources */,
 				FA28BE9B1819C9E5000815C7 /* home@2x.png in Resources */,
 				FA28BEC51819E6CB000815C7 /* DashboardViewController.xib in Resources */,
 				FA28BE9A1819C9E5000815C7 /* home.png in Resources */,
@@ -586,6 +649,7 @@
 				FA822F211819C1B80078DF48 /* LoginViewController.xib in Resources */,
 				FA5BFD6D181C464C000C0CBE /* TeamListTableViewController.xib in Resources */,
 				FA5BFD6F181C468C000C0CBE /* TeamCell.xib in Resources */,
+				FA0BD496181D9E140052D33C /* ihealth.jpg in Resources */,
 				FA5BFD53181C327E000C0CBE /* RegisterViewController.xib in Resources */,
 				FA5BFD84181CBA1A000C0CBE /* homer.png in Resources */,
 			);
@@ -762,9 +826,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/omarmetwally/Desktop/NextCare/NextCare,
+					/Users/omarmetwally/Desktop/NextCare,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NextCare/NextCare-Prefix.pch";
 				INFOPLIST_FILE = "NextCare/NextCare-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -775,9 +845,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/omarmetwally/Desktop/NextCare/NextCare,
+					/Users/omarmetwally/Desktop/NextCare,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NextCare/NextCare-Prefix.pch";
 				INFOPLIST_FILE = "NextCare/NextCare-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

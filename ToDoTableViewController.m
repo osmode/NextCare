@@ -97,7 +97,7 @@
     [cell.completedSwitch addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
 
     if ( [todoItem completed] > 0 ) {
-        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+        //[cell setAccessoryType:UITableViewCellAccessoryCheckmark];
         cell.backgroundColor = [UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:0.25];
         cell.completedLabel.text = @"Complete!";
         cell.completedLabel.textColor = [UIColor blackColor];

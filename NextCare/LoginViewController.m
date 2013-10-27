@@ -188,7 +188,7 @@
                                    [[NCTeamDataStore sharedStore] populateToDoList:idInteger];
                                    
                                    // populate team lists and to do lists depending on whether or not a patient/caregiver login, or if a physician logs in
-                                   if ([type isEqualToString:@"patient"] || [type isEqualToString:@"caregiver"]) {
+                                   if ([type isEqualToString:@"patient"] ) {
                                        [[NCTeamDataStore sharedStore] populatePatientCaregiverTeam:idInteger];
                                    } else {
                                        [[NCTeamDataStore sharedStore] populatePhysiciansPatients:idInteger];
