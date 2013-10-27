@@ -9,7 +9,7 @@
 #import "NCToDoItem.h"
 
 @implementation NCToDoItem
-@synthesize title, description, responsibleParty, completed, todoType, caregiverId;
+@synthesize title, description, responsibleParty, completed, todoType, caregiverId, type;
 
 
 @end

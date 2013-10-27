@@ -99,8 +99,22 @@
     if ( [todoItem completed] > 0 ) {
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
         cell.backgroundColor = [UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:0.25];
+        cell.completedLabel.text = @"Complete!";
+        cell.completedLabel.textColor = [UIColor blackColor];
+        
     } else {
         cell.backgroundColor = [UIColor whiteColor];
+        cell.completedLabel.text = @"Incomplete";
+        cell.completedLabel.textColor = [UIColor redColor];
+    }
+    
+    // set image according to type
+    if ( [[todoItem type] isEqualToString:@"medication"] ) {
+        [cell.categoryImageView setImage:[UIImage imageNamed:@"medication"]];
+    } else if ( [[todoItem type] isEqualToString:@"nutrition"] ) {
+        [cell.categoryImageView setImage:[UIImage imageNamed:@"nutrition.png"]];
+    } else if ( [[todoItem type] isEqualToString:@"scale"] ) {
+        [cell.categoryImageView setImage:[UIImage imageNamed:@"scale.png"]];
     }
     
     return cell;

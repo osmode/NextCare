@@ -73,7 +73,6 @@
 }
 -(void)populateToDoList:(NSString *)userId
 {
-    
     NSMutableDictionary *moreParams = [[NSMutableDictionary alloc] init];
     /*
     [moreParams setValue:emailTextField.text forKey:@"email"];
@@ -111,14 +110,17 @@
                                        NSString *caregiverId = [caregiverIdNumber stringValue];
                                        
                                        NSNumber *complete = [d valueForKey:@"complete"];
+                                       
+                                       NSString *type = [d valueForKey:@"type"];
 
                                        NCToDoItem *newTodo = [[NCToDoItem alloc] init];
                                        [newTodo setTitle:title];
                                        [newTodo setResponsibleParty:owner];
                                        [newTodo setCompleted:[complete intValue]];
                                        [newTodo setCaregiverId:caregiverId];
+                                       [newTodo setType:type];
                                        
-                                       NSLog(@"completed status: %i", [newTodo completed]);
+                                       NSLog(@"type: %@", type);
                                     
                                        [[[NCTeamDataStore sharedStore] toDoList] addObject:newTodo];
                                         

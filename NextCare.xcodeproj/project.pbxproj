@@ -41,6 +41,9 @@
 		FA28BEFA181A4B55000815C7 /* UNIRest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BEED181A4B55000815C7 /* UNIRest.m */; };
 		FA28BEFD181A4C8C000815C7 /* ServerOAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA28BEFC181A4C8C000815C7 /* ServerOAuthController.m */; };
 		FA3A437C181ADEFA001522FD /* NCTeamDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A437B181ADEFA001522FD /* NCTeamDataStore.m */; };
+		FA538E01181D01E20035DC0A /* medication.png in Resources */ = {isa = PBXBuildFile; fileRef = FA538DFE181D01E20035DC0A /* medication.png */; };
+		FA538E02181D01E20035DC0A /* nutrition.png in Resources */ = {isa = PBXBuildFile; fileRef = FA538DFF181D01E20035DC0A /* nutrition.png */; };
+		FA538E03181D01E20035DC0A /* scale.png in Resources */ = {isa = PBXBuildFile; fileRef = FA538E00181D01E20035DC0A /* scale.png */; };
 		FA5BFD52181C327E000C0CBE /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5BFD50181C327E000C0CBE /* RegisterViewController.m */; };
 		FA5BFD53181C327E000C0CBE /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5BFD51181C327E000C0CBE /* RegisterViewController.xib */; };
 		FA5BFD57181C3E2B000C0CBE /* ToDoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5BFD55181C3E2B000C0CBE /* ToDoTableViewController.m */; };
@@ -150,6 +153,9 @@
 		FA28BEFC181A4C8C000815C7 /* ServerOAuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerOAuthController.m; sourceTree = "<group>"; };
 		FA3A437A181ADEFA001522FD /* NCTeamDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTeamDataStore.h; sourceTree = "<group>"; };
 		FA3A437B181ADEFA001522FD /* NCTeamDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTeamDataStore.m; sourceTree = "<group>"; };
+		FA538DFE181D01E20035DC0A /* medication.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medication.png; sourceTree = "<group>"; };
+		FA538DFF181D01E20035DC0A /* nutrition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nutrition.png; sourceTree = "<group>"; };
+		FA538E00181D01E20035DC0A /* scale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scale.png; sourceTree = "<group>"; };
 		FA5BFD4F181C327E000C0CBE /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		FA5BFD50181C327E000C0CBE /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		FA5BFD51181C327E000C0CBE /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -319,6 +325,8 @@
 				FA5BFD59181C3E69000C0CBE /* todoCell.xib */,
 				FA5BFD5C181C3F68000C0CBE /* todoCell.h */,
 				FA5BFD5D181C3F68000C0CBE /* todoCell.m */,
+				FA28BEC91819EA0D000815C7 /* NCToDoItem.h */,
+				FA28BECA1819EA0D000815C7 /* NCToDoItem.m */,
 			);
 			name = ToDo;
 			sourceTree = "<group>";
@@ -366,8 +374,6 @@
 				FA5BFD73181C48E3000C0CBE /* NCTeamMember.h */,
 				FA5BFD74181C48E3000C0CBE /* NCTeamMember.m */,
 				FA28BEC71819E832000815C7 /* NCTeam.m */,
-				FA28BEC91819EA0D000815C7 /* NCToDoItem.h */,
-				FA28BECA1819EA0D000815C7 /* NCToDoItem.m */,
 				FA3A437A181ADEFA001522FD /* NCTeamDataStore.h */,
 				FA3A437B181ADEFA001522FD /* NCTeamDataStore.m */,
 				FA822EF41819C0EE0078DF48 /* NextCare */,
@@ -413,6 +419,9 @@
 		FA822EF51819C0EE0078DF48 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA538DFE181D01E20035DC0A /* medication.png */,
+				FA538DFF181D01E20035DC0A /* nutrition.png */,
+				FA538E00181D01E20035DC0A /* scale.png */,
 				FA5BFD5F181C4517000C0CBE /* diary.png */,
 				FA5BFD83181CBA1A000C0CBE /* homer.png */,
 				FA5BFD85181CBA6E000C0CBE /* hibbert.png */,
@@ -529,7 +538,9 @@
 			files = (
 				FA5BFD88181CBA9B000C0CBE /* marge.png in Resources */,
 				FA5BFD58181C3E2B000C0CBE /* ToDoTableViewController.xib in Resources */,
+				FA538E02181D01E20035DC0A /* nutrition.png in Resources */,
 				FA5BFD7B181C8A91000C0CBE /* NewTodoItemViewController.xib in Resources */,
+				FA538E01181D01E20035DC0A /* medication.png in Resources */,
 				FA28BEB81819D2E0000815C7 /* OAuthLoginViewController.xib in Resources */,
 				FA5BFD80181C9866000C0CBE /* NewRelationshipViewController.xib in Resources */,
 				FA5BFD62181C4517000C0CBE /* diary@2x.png in Resources */,
@@ -544,6 +555,7 @@
 				FA822EF91819C0EE0078DF48 /* InfoPlist.strings in Resources */,
 				FA5BFD61181C4517000C0CBE /* diary.png in Resources */,
 				FA5BFD86181CBA6E000C0CBE /* hibbert.png in Resources */,
+				FA538E03181D01E20035DC0A /* scale.png in Resources */,
 				FA822F011819C0EE0078DF48 /* Images.xcassets in Resources */,
 				FA28BE9E1819CD3D000815C7 /* withings.png in Resources */,
 				FA822F211819C1B80078DF48 /* LoginViewController.xib in Resources */,
