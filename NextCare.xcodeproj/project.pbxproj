@@ -99,6 +99,7 @@
 		FA822F141819C0EE0078DF48 /* NextCareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA822F131819C0EE0078DF48 /* NextCareTests.m */; };
 		FA822F201819C1B80078DF48 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA822F1E1819C1B80078DF48 /* LoginViewController.m */; };
 		FA822F211819C1B80078DF48 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA822F1F1819C1B80078DF48 /* LoginViewController.xib */; };
+		FA9CA991181DB6F200A4634F /* red-play-hi-res.png in Resources */ = {isa = PBXBuildFile; fileRef = FA9CA990181DB6F200A4634F /* red-play-hi-res.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -245,6 +246,7 @@
 		FA822F1D1819C1B80078DF48 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = NextCare/LoginViewController.h; sourceTree = "<group>"; };
 		FA822F1E1819C1B80078DF48 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = NextCare/LoginViewController.m; sourceTree = "<group>"; };
 		FA822F1F1819C1B80078DF48 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = NextCare/LoginViewController.xib; sourceTree = "<group>"; };
+		FA9CA990181DB6F200A4634F /* red-play-hi-res.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-play-hi-res.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -502,6 +504,7 @@
 		FA822EF51819C0EE0078DF48 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA9CA990181DB6F200A4634F /* red-play-hi-res.png */,
 				FA0BD497181DA8A90052D33C /* team.png */,
 				FA0BD498181DA8A90052D33C /* video.png */,
 				FA0BD495181D9E140052D33C /* ihealth.jpg */,
@@ -630,6 +633,7 @@
 				FA2CE03E181D7C7D00F5E438 /* phone.png in Resources */,
 				FA538E02181D01E20035DC0A /* nutrition.png in Resources */,
 				FA5BFD7B181C8A91000C0CBE /* NewTodoItemViewController.xib in Resources */,
+				FA9CA991181DB6F200A4634F /* red-play-hi-res.png in Resources */,
 				FA538E01181D01E20035DC0A /* medication.png in Resources */,
 				FA2CE03B181D7B3100F5E438 /* PatientDetailViewController.xib in Resources */,
 				FA28BEB81819D2E0000815C7 /* OAuthLoginViewController.xib in Resources */,

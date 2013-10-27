@@ -35,9 +35,10 @@
     emailTextField.delegate = self;
     passwordTextField.delegate = self;
     
-    [[self navigationItem] setTitle:@"Login"];
+    [[self navigationItem] setTitle:@"NextCare"];
     loginButton.layer.cornerRadius = 10.0;
     authenticateButton.layer.cornerRadius = 10.0;
+    passwordTextField.secureTextEntry = YES;
     
 }
 
