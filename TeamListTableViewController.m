@@ -11,6 +11,7 @@
 #import "TeamCell.h"
 #import "NCTeamMember.h"
 #import "NewRelationshipViewController.h"
+#import "PatientDetailViewController.h"
 
 @interface TeamListTableViewController ()
 
@@ -158,22 +159,27 @@
 }
 */
 
-/*
+
 #pragma mark - Table view delegate
 
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    NSLog(@"didSelectRowAtIndexPath: %li", (long)indexPath.row);
+    
+    NCTeamMember *selectedTeamMember = [[[NCTeamDataStore sharedStore] teamMemberList] objectAtIndex:indexPath.row];
 
-    // Pass the selected object to the new view controller.
+    // if this is not a patient, break
+    if ( ![[selectedTeamMember role] isEqual:@"patient"]  && ![[selectedTeamMember role] isEqualToString:@"Patient"] ) {
+        return;
+    }
+    
+    PatientDetailViewController *pdvc = [[PatientDetailViewController alloc] init];
+    pdvc.currentPatientId = [NSString stringWithFormat:@"%i", [selectedTeamMember idNumber]];
     
     // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    [self.navigationController pushViewController:pdvc animated:YES];
 }
  
- */
+
 
 @end

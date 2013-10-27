@@ -37,6 +37,7 @@
     
     [[self navigationItem] setTitle:@"Login"];
     loginButton.layer.cornerRadius = 10.0;
+    authenticateButton.layer.cornerRadius = 10.0;
     
 }
 

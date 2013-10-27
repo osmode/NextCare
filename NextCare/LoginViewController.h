@@ -17,7 +17,7 @@
     __weak IBOutlet UITextField *passwordTextField;
     __weak IBOutlet UIButton *loginButton;
     __weak IBOutlet UIButton *authenticateButton;
-    
+    __weak IBOutlet UIButton *validicButton;
 }
 
 @property (nonatomic, strong) WithingsOAuth1Controller *withingsOAuth1Controller;
