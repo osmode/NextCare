@@ -77,10 +77,12 @@
     NCToDoItem *todoItem = [[[NCTeamDataStore sharedStore] toDoList] objectAtIndex:indexPath.row];
     
     [cell.titleLabel setText:[todoItem title]];
-    [cell.ownerLabel setText:[@"Responsible party: " stringByAppendingString:[todoItem responsibleParty]]];
+    [cell.ownerLabel setText:[@"Supervisor: " stringByAppendingString:[todoItem responsibleParty]]];
+    cell.ownerLabel.textColor = [UIColor blueColor];
 
     if ( [todoItem completed] > 0 ) {
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+        cell.backgroundColor = [UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:0.25];
     }
     
     return cell;

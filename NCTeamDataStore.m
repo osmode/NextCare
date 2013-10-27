@@ -112,6 +112,8 @@
                                        [newTodo setTitle:title];
                                        [newTodo setResponsibleParty:owner];
                                        [newTodo setCompleted:[complete intValue]];
+                                       
+                                       NSLog(@"completed status: %i", [newTodo completed]);
                                     
                                        [[[NCTeamDataStore sharedStore] toDoList] addObject:newTodo];
                                         
@@ -185,6 +187,7 @@
                                        
                                        [[[NCTeamDataStore sharedStore] teamMemberList] addObject:teamMember];
                                        
+                                       
                                    }
                                    
                                });
@@ -193,6 +196,8 @@
 
 -(void)populatePhysiciansPatients:(NSString *)userId
 {
+    NSLog(@"populatePhysiciansPatients");
+    
     NSMutableDictionary *moreParams = [[NSMutableDictionary alloc] init];
     /*
      [moreParams setValue:emailTextField.text forKey:@"email"];
@@ -244,8 +249,9 @@
                                        [[[NCTeamDataStore sharedStore] teamMemberList] addObject:teamMember];
                                        
                                    }
-                                   
-                                   NSLog(@"length of physician's team member list: %lu", (unsigned long)[[[NCTeamDataStore sharedStore] teamMemberList] count]);
+                                                                      
+                                   NSLog(@"right after adding: %lu", (unsigned long)[[[NCTeamDataStore sharedStore] teamMemberList] count]);
+
                                });
                            }];
 }

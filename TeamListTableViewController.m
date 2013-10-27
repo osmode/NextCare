@@ -10,6 +10,7 @@
 #import "NCTeamDataStore.h"
 #import "TeamCell.h"
 #import "NCTeamMember.h"
+#import "NewRelationshipViewController.h"
 
 @interface TeamListTableViewController ()
 
@@ -21,7 +22,8 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(newMember)];
+        [[self navigationItem] setRightBarButtonItem:addButton];
     }
     return self;
 }
@@ -35,13 +37,15 @@
     
     [[self navigationItem] setTitle:@"Team List"];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    
 }
 
+-(void)newMember
+{
+    NewRelationshipViewController *nrvc = [[NewRelationshipViewController alloc] init];
+    [[self navigationController] pushViewController:nrvc animated:YES];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -60,7 +64,9 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
-    // Return the number of rows in the section.
+
+    NSLog(@"Number of team members: %lu", (unsigned long)[[[NCTeamDataStore sharedStore] teamMemberList] count] );
+    
     return [[[NCTeamDataStore sharedStore] teamMemberList] count];
 }
 
@@ -78,6 +84,20 @@
     [cell.nameLabel setText:memberName];
     [cell.roleLabel setText:memberRole];
     cell.roleLabel.textColor = [UIColor blueColor];
+    
+    if ( [[teamMember role] isEqualToString:@"physician"] ) {
+        cell.backgroundColor = [UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:0.2];
+        [cell.avatarImageview setImage:[UIImage imageNamed:@"hibbert.png"]];
+        
+    } else if ( [[teamMember role] isEqualToString:@"patient"] ) {
+        cell.backgroundColor = [UIColor colorWithRed:0.2 green:0.0 blue:1.0 alpha:0.2];
+        [cell.avatarImageview setImage:[UIImage imageNamed:@"homer.png"]];
+    } else if ( [[teamMember role] isEqualToString:@"caregiver"] ) {
+        cell.backgroundColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.1];
+        [cell.avatarImageview setImage:[UIImage imageNamed:@"marge.png"]];
+    } else {
+        cell.backgroundColor = [UIColor colorWithRed:0.2 green:0.8 blue:0.1 alpha:0.2];
+    }
     
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
 
