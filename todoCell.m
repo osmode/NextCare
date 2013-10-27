@@ -12,8 +12,16 @@
 #import "ServerOAuthController.h"
 
 @implementation todoCell
-@synthesize smsButton, emailButton;
+@synthesize smsButton, emailButton, completedSwitch, completedLabel;
 
+-(id)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
 -(void)smsButtonPressed:(UIButton *)sender
 {
     NSLog(@"smsButtonPressed! %i", sender.tag);
@@ -92,6 +100,12 @@
                                    
                                });
                            }];
+    
+}
+
+-(void)switchChanged:(UISwitch *)senderSwitch
+{
+    
     
 }
 

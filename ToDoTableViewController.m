@@ -11,6 +11,7 @@
 #import "NCToDoItem.h"
 #import "todoCell.h"
 #import "NewTodoItemViewController.h"
+#import "ServerOAuthController.h"
 
 @interface ToDoTableViewController ()
 
@@ -44,6 +45,11 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"viewWillAppear");
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -72,6 +78,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"cellForRow");
     static NSString *CellIdentifier = @"todoCell";
     todoCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     NCToDoItem *todoItem = [[[NCTeamDataStore sharedStore] toDoList] objectAtIndex:indexPath.row];
@@ -81,17 +88,39 @@
     cell.ownerLabel.textColor = [UIColor blueColor];
     cell.smsButton.tag = indexPath.row;
     cell.emailButton.tag = indexPath.row;
+    cell.completedSwitch.tag = indexPath.row;
     
     [cell.smsButton addTarget:self action:@selector(smsButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     [cell.emailButton addTarget:self action:@selector(emailButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [cell.completedSwitch addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
 
     if ( [todoItem completed] > 0 ) {
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
         cell.backgroundColor = [UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:0.25];
+    } else {
+        cell.backgroundColor = [UIColor whiteColor];
     }
     
     return cell;
 
+}
+-(void)switchChanged:(UISwitch *)switchIn
+{
+    int idx = switchIn.tag;
+    
+    NCToDoItem *todoItem = [[[NCTeamDataStore sharedStore] toDoList] objectAtIndex:idx];
+    
+    if (switchIn.on) {
+        [self setItemCheck:idx state:1];
+        [todoItem setCompleted:1];
+        
+    } else {
+        [self setItemCheck:idx state:0];
+        [todoItem setCompleted:0];
+    }
+    
+    NSLog(@"xxx: %c", switchIn.on);
+    [self.tableView reloadData];
 }
 /*
 -(void)smsButtonPressed:(UIButton *)sender
@@ -120,61 +149,43 @@
     [[self navigationController] pushViewController:ntivc animated:YES];
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)setItemCheck:(int)index state:(int)newState
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Table view delegate
-
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-
-    // Pass the selected object to the new view controller.
+    NCToDoItem *todoItem = [[[NCTeamDataStore sharedStore] toDoList] objectAtIndex:index];
     
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    NSString *patientId = [NSString stringWithFormat:@"%i",[[NCTeamDataStore sharedStore] userId]];
+    NSString *message = [todoItem title];
+    
+    NSString *pathFirstHalf = @"todo/";
+    NSString *pathLastHalf;
+    if (newState == 0 ) {  // set to not checked
+    pathLastHalf = @"/uncheck";
+    } else {
+        pathLastHalf = @"/check";
+    }
+    
+    NSString *fullPath = [[pathFirstHalf stringByAppendingString:patientId] stringByAppendingString:pathLastHalf];
+    
+    NSMutableDictionary *moreParams = [[NSMutableDictionary alloc] init];
+    
+    NSURLRequest *request = [ServerOAuthController preparedRequestForPath:fullPath parameters:moreParams HTTPmethod:@"POST" oauthToken:@"" oauthSecret:@""];
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:NSOperationQueue.mainQueue
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                               dispatch_async(dispatch_get_main_queue(), ^{
+                                   NSLog(@"path238 %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+                                   
+                                   if (error) {
+                                       
+                                       NSLog(@"Error in API request: %@", error.localizedDescription);
+                                       return;
+                                   }
+                                   
+                               });
+                           }];
+    
 }
- 
- */
+
 
 @end

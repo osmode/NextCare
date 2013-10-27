@@ -16,5 +16,6 @@
 //-(void)smsButtonPressed:(UIButton *)sender;
 -(void)smsButtonPressed;
 -(void)emailButtonPressed;
+-(void)switchChanged:(UISwitch *)switchIn;
 
 @end

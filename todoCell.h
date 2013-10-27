@@ -18,8 +18,12 @@
 @property (weak, nonatomic) IBOutlet UIImageView *categoryImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ownerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *completedLabel;
+
+
+@property (weak, nonatomic) IBOutlet UISwitch *completedSwitch;
 
 -(void)smsButtonPressed:(UIButton *)sender;
-
+-(void)switchChanged:(UISwitch *)senderSwitch;
 
 @end
