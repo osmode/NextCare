@@ -11,6 +11,7 @@
 #import "NCToDoItem.h"
 #import "ServerOAuthController.h"
 
+
 @implementation todoCell
 @synthesize smsButton, emailButton, completedSwitch, completedLabel;
 

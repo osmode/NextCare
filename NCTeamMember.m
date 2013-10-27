@@ -9,6 +9,6 @@
 #import "NCTeamMember.h"
 
 @implementation NCTeamMember
-@synthesize name, role, email,phone, code, idNumber;
+@synthesize name, role, email,phone, code, idNumber, avatarPath;
 
 @end

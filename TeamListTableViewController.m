@@ -100,7 +100,14 @@
     }
     
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-
+    
+    // set avatar image
+    
+    NSURL *url = [NSURL URLWithString:[teamMember avatarPath]];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    UIImage *img = [[UIImage alloc] initWithData:data];
+    [[cell avatarImageview] setImage:img];
+    
     return cell;
 
 }
@@ -109,6 +116,8 @@
 {
     return 80.0;
 }
+
+
 
 /*
 // Override to support conditional editing of the table view.

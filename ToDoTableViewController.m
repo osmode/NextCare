@@ -13,6 +13,8 @@
 #import "NewTodoItemViewController.h"
 #import "ServerOAuthController.h"
 
+#define ROOT_PATH  @"http://162.243.36.210/"
+
 @interface ToDoTableViewController ()
 
 @end
@@ -140,7 +142,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100.0;
+    return 200.0;
 }
 
 -(void)newTodoItem

@@ -11,6 +11,8 @@
 #import "NCToDoItem.h"
 #import "NCTeamMember.h"
 
+#define ROOT_PATH   @"http://162.243.36.210/"
+
 @implementation NCTeamDataStore
 @synthesize sections, teamArray, teamMemberList, toDoList, userId, userToken;
 @synthesize role;
@@ -176,7 +178,9 @@
                                        NSString *phone = [d valueForKey:@"phone"];
                                        NSString *code = [d valueForKey:@"code"];
                                        
-                                       NSLog(@"new team member: %@", name);
+                                       NSString *relativePath = [d valueForKey:@"avatar"];
+                                       
+                                       NSString *fullAvatarPath = [ROOT_PATH stringByAppendingString:relativePath];
                                        
                                        NCTeamMember *teamMember = [[NCTeamMember alloc] init];
                                        
@@ -187,6 +191,10 @@
                                        [teamMember setCode:code];
                                        [teamMember setIdNumber:[idNumber intValue]];
                                        
+                                       [teamMember setAvatarPath:fullAvatarPath];
+                                       
+                                       NSLog(@"fullAvatarPath: %@", fullAvatarPath);
+
                                        [[[NCTeamDataStore sharedStore] teamMemberList] addObject:teamMember];
                                        
                                        
@@ -237,7 +245,9 @@
                                        NSString *phone = [d valueForKey:@"phone"];
                                        NSString *code = [d valueForKey:@"code"];
                                        
-                                       NSLog(@"new team member: %@", name);
+                                       NSString *relativePath = [d valueForKey:@"avatar"];
+                                       
+                                       NSString *fullAvatarPath = [ROOT_PATH stringByAppendingString:relativePath];
                                        
                                        NCTeamMember *teamMember = [[NCTeamMember alloc] init];
                                        
@@ -247,6 +257,9 @@
                                        [teamMember setPhone:phone];
                                        [teamMember setCode:code];
                                        [teamMember setIdNumber:[idNumber intValue]];
+                                       [teamMember setAvatarPath:fullAvatarPath];
+                                       
+                                       NSLog(@"fullAvatarPath: %@", fullAvatarPath);
                                        
                                        [[[NCTeamDataStore sharedStore] teamMemberList] addObject:teamMember];
                                        

@@ -16,5 +16,6 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *email, *phone, *role, *code;
 @property (nonatomic) int idNumber;
+@property (nonatomic, strong) NSString *avatarPath;
 
 @end
