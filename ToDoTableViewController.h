@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ToDoTableViewController : UITableViewController
+{
+    
+}
+
+-(void)smsButtonPressed:(UIButton *)sender;
+-(void)emailButtonPressed:(UIButton *)sender;
 
 @end

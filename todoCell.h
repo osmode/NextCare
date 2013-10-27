@@ -10,12 +10,16 @@
 
 @interface todoCell : UITableViewCell
 {
-    
+
 }
+@property (weak, nonatomic) IBOutlet UIButton *smsButton;
+@property (weak, nonatomic) IBOutlet UIButton *emailButton;
 
 @property (weak, nonatomic) IBOutlet UIImageView *categoryImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ownerLabel;
+
+-(void)smsButtonPressed:(UIButton *)sender;
 
 
 @end

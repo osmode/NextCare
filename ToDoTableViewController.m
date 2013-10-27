@@ -79,6 +79,11 @@
     [cell.titleLabel setText:[todoItem title]];
     [cell.ownerLabel setText:[@"Supervisor: " stringByAppendingString:[todoItem responsibleParty]]];
     cell.ownerLabel.textColor = [UIColor blueColor];
+    cell.smsButton.tag = indexPath.row;
+    cell.emailButton.tag = indexPath.row;
+    
+    [cell.smsButton addTarget:self action:@selector(smsButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.emailButton addTarget:self action:@selector(emailButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
 
     if ( [todoItem completed] > 0 ) {
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
@@ -88,6 +93,17 @@
     return cell;
 
 }
+
+-(void)smsButtonPressed:(UIButton *)sender
+{
+    NSLog(@"smsButtonPressed at row: %li", (long)sender.tag);
+}
+
+-(void)emailButtonPressed:(UIButton *)sender
+{
+    NSLog(@"emailButtonPressed at row: %li", (long)sender.tag);
+}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 100.0;

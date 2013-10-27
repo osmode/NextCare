@@ -9,5 +9,12 @@
 #import "todoCell.h"
 
 @implementation todoCell
+@synthesize smsButton, emailButton;
+
+-(void)smsButtonPressed:(UIButton *)sender
+{
+    NSLog(@"smsButtonPressed!");
+}
+
 
 @end
